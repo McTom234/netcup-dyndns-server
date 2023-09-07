@@ -1,8 +1,6 @@
-<IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews -Indexes
-    </IfModule>
+Options -MultiViews -Indexes
 
+<IfModule mod_rewrite.c>
     RewriteEngine On
 
     # Handle Authorization Header
@@ -19,3 +17,19 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+#PROTECT ENV FILE
+<Files .env>
+    order allow,deny
+    Deny from all
+</Files>
+<Files .env.example>
+    order allow,deny
+    Deny from all
+</Files>
+
+#PROTECT htaccess FILE
+<Files .htaccess>
+    order allow,deny
+    Deny from all
+</Files>
