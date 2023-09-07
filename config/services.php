@@ -14,21 +14,11 @@ return [
     |
     */
 
-    'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
-        'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
-        'scheme' => 'https',
-    ],
-
-    'postmark' => [
-        'token' => env('POSTMARK_TOKEN'),
-    ],
-
-    'ses' => [
-        'key' => env('AWS_ACCESS_KEY_ID'),
-        'secret' => env('AWS_SECRET_ACCESS_KEY'),
-        'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
+    'netcup-ccp' => [
+        'customer_number' => env('NC_CUSTOMER_NUMBER'),
+        'api_key' => env('NC_API_KEY'),
+        'api_password' => env('NC_API_PASSWORD'),
+        'api_endpoint' => env('NC_API_ENDPOINT', 'https://ccp.netcup.net/run/webservice/servers/endpoint.php?JSON'),
     ],
 
 ];

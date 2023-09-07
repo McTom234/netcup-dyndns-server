@@ -45,9 +45,9 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'api' => [
+            'auth',
             ThrottleRequests::class.':api',
             SubstituteBindings::class,
-            'auth',
         ],
     ];
 
