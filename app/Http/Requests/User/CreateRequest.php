@@ -9,7 +9,6 @@ use Illuminate\Validation\Rules\Password;
 
 class CreateRequest extends ApiFormRequest
 {
-
     public function rules(): array
     {
         return [
